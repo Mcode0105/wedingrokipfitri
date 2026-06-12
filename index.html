@@ -287,6 +287,22 @@
                 transform: rotate(360deg) translateX(40px);
             }
         }
+
+        /* Mobile Bottom Nav & Controls Responsive Safe Area Fixes */
+        #bottom-nav {
+            bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important;
+        }
+        #floating-controls {
+            bottom: calc(6rem + env(safe-area-inset-bottom, 0px)) !important;
+        }
+        @media (max-width: 640px) {
+            #bottom-nav {
+                bottom: calc(1rem + env(safe-area-inset-bottom, 0px)) !important;
+            }
+            #floating-controls {
+                bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px)) !important;
+            }
+        }
     </style>
 </head>
 <body class="text-sage-900 font-sans overflow-hidden">
@@ -329,26 +345,26 @@
     </div>
 
     <!-- BOTTOM NAVIGATION PILL (Initially hidden, shown after Buka Undangan) -->
-    <nav id="bottom-nav" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-[92%] sm:w-[90%] max-w-md bg-white/90 backdrop-blur-md border border-champagne-200/80 rounded-2xl shadow-xl z-40 px-3 sm:px-6 py-2 sm:py-2.5 flex justify-between items-center transition-all duration-1000 opacity-0 translate-y-10 pointer-events-none">
-        <a href="#hero" class="nav-item flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto active-nav">
+    <nav id="bottom-nav" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-[92%] sm:w-[90%] max-w-md bg-white/90 backdrop-blur-md border border-champagne-200/80 rounded-2xl shadow-xl z-40 px-2 sm:px-6 py-2 sm:py-2.5 flex justify-between items-center transition-all duration-1000 opacity-0 translate-y-10 pointer-events-none">
+        <a href="#hero" class="nav-item flex-1 min-w-0 flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto active-nav">
             <i class="fa-solid fa-heart text-sm sm:text-base"></i>
-            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold">Home</span>
+            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold whitespace-nowrap">Home</span>
         </a>
-        <a href="#mempelai" class="nav-item flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto">
+        <a href="#mempelai" class="nav-item flex-1 min-w-0 flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto">
             <i class="fa-solid fa-user-friends text-sm sm:text-base"></i>
-            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold">Mempelai</span>
+            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold whitespace-nowrap">Mempelai</span>
         </a>
-        <a href="#acara" class="nav-item flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto">
+        <a href="#acara" class="nav-item flex-1 min-w-0 flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto">
             <i class="fa-solid fa-calendar-days text-sm sm:text-base"></i>
-            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold">Acara</span>
+            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold whitespace-nowrap">Acara</span>
         </a>
-        <a href="#galeri" class="nav-item flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto">
+        <a href="#galeri" class="nav-item flex-1 min-w-0 flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto">
             <i class="fa-solid fa-images text-sm sm:text-base"></i>
-            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold">Galeri</span>
+            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold whitespace-nowrap">Galeri</span>
         </a>
-        <a href="#rsvp" class="nav-item flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto">
+        <a href="#rsvp" class="nav-item flex-1 min-w-0 flex flex-col items-center gap-0.5 text-sage-500 hover:text-champagne-600 transition-all duration-300 pointer-events-auto">
             <i class="fa-solid fa-envelope-open-text text-sm sm:text-base"></i>
-            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold">RSVP</span>
+            <span class="text-[8px] sm:text-[9px] uppercase tracking-wider font-semibold whitespace-nowrap">RSVP</span>
         </a>
     </nav>
 
